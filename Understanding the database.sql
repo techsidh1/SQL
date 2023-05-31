@@ -6,13 +6,13 @@ first Video
 -- use AdventureWorks2019;
 
 
-# total objects in databse
+-- total objects in databse
 select type_desc,
 		count(type_desc) as total_count
 	from sys.objects
 	group by type_desc;
 
-- number of tables and columns in database
+-- number of tables and columns in database
 select	
 		count(distinct s.name) as schemas,
 		count(distinct t.name) as tables,
